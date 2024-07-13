@@ -1,0 +1,11 @@
+@import "./functions";
+
+$font-family: 'Poppins', sans-serif;
+
+$content-width: 1133px;
+
+$breakpoint-tablet--min: 940px;
+
+$breakpoint-mobile: max-value-for-prev-bp($breakpoint-tablet--min);
+
+

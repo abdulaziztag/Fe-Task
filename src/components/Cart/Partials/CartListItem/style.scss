@@ -1,0 +1,74 @@
+@import "@/styles/mixins";
+
+.product {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding: 9px 23px 9px 10px;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+
+  &__image {
+    width: 80px;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  &__info {
+    margin-left: 18px;
+    flex-grow: 1;
+
+    &__title {
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    &__description {
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
+
+  &__quantity {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    column-gap: 6px;
+
+    &__count {
+      font-size: 22px;
+      font-weight: 600;
+    }
+
+    &__actions {
+      display: flex;
+      flex-direction: column;
+
+      .increase {
+        @include triangle-up;
+      }
+
+      .decrease {
+        margin-top: 3px;
+        @include triangle-down;
+      }
+    }
+  }
+
+  &__price {
+    font-size: 14px;
+    font-weight: 400;
+    width: 72px;
+    text-align: right;
+  }
+
+  &__remove {
+    background-image: url("@/assets/icons/trash-can.svg");
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 25px;
+    margin-left: 28px;
+    cursor: pointer;
+  }
+}

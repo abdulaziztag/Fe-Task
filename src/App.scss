@@ -1,0 +1,18 @@
+@import "styles/colors";
+@import "styles/typography";
+@import "styles/variables";
+
+:root {
+  background: $background-color-purple;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  @media (max-width: $breakpoint-mobile) {
+    height: initial;
+  }
+}

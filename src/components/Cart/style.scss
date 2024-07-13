@@ -1,0 +1,62 @@
+@import "@/styles/variables.scss";
+@import "@/styles/colors.scss";
+
+.cart__container {
+  width: $content-width;
+  background: $color-white;
+  display: flex;
+  flex-direction: row;
+  gap: 55px;
+  padding: 50px 45px 50px 37px;
+  border-radius: 15px;
+  margin: 32px;
+
+  &__back-btn {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 23px;
+
+    &::before {
+      display: inline-block;
+      content: "";
+      background-image: url("@/assets/icons/caret.svg");
+      width: 30px;
+      aspect-ratio: 1;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__items {
+    flex-grow: 1;
+
+    &__title {
+        font-size: 18px;
+        font-weight: 600;
+        margin-top: 24px;
+    }
+
+    &__count {
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    &__list {
+      display: flex;
+      flex-direction: column;
+      row-gap: 24px;
+      list-style: none;
+      margin-top: 19px;
+    }
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    flex-direction: column;
+    padding: 30px 25px 30px 25px;
+    margin: 20px;
+  }
+}

@@ -1,0 +1,3 @@
+@function max-value-for-prev-bp($bp) {
+  @return ($bp - 0.02px);
+}
